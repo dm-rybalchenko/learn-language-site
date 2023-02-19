@@ -7,10 +7,12 @@ export interface IOption {
 }
 
 export interface ISelectProps {
+  label?: string;
   value: IOption;
   onChange: (
     newValue: SingleValue<IOption>,
     actionMeta: ActionMeta<IOption>
   ) => void;
   options: IOption[];
+  short?: boolean;
 }

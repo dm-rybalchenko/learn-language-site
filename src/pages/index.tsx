@@ -16,20 +16,25 @@ export default function Home(): JSX.Element {
         <h1>Главная страница</h1>
 
         <div style={{ display: 'flex', gap: 30, margin: 30 }}>
-          <Button view="primary">Кнопка</Button>
-          <Button long view="secondary">
-            Кнопка
+          <Button rounded>Кнопка</Button>
+          <Button rounded view="error">
+            Ошибка
           </Button>
-          <Button view="secondary">Кнопка</Button>
-          <Button lg view="secondary">
-            Кнопка
+          <Button rounded view="warning">
+            Внимание
           </Button>
-          <Button>Кнопка</Button>
-          <Button view="danger">Кнопка</Button>
-          <Button view="warning">Кнопка</Button>
         </div>
-        <div style={{ display: 'flex', gap: 30, margin: 30 }}>
+        <div
+          style={{ background: 'red', display: 'flex', gap: 30, margin: 30 }}
+        >
           <Select
+            options={optionsSelect}
+            value={optionsSelect[0]}
+            onChange={(v): void => console.log(v)}
+          />
+          <Select
+            short
+            label="Уровень"
             options={optionsSelect}
             value={optionsSelect[0]}
             onChange={(v): void => console.log(v)}
