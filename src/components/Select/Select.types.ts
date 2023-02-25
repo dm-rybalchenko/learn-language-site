@@ -11,7 +11,6 @@ export interface ISelectProps {
   value: IOption;
   onChange: (
     newValue: SingleValue<IOption>,
-    actionMeta: ActionMeta<IOption>
   ) => void;
   options: IOption[];
   short?: boolean;

@@ -2,6 +2,7 @@ import Layout from '@/components/Layout/Layout';
 
 
 function About(): JSX.Element {
+	
   return (
     <Layout title="О сайте">
       <div>

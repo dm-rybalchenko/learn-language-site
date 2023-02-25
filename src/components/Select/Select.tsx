@@ -10,7 +10,6 @@ const StyledSelect = styled(ReactSelect<IOption>)<ISelectProps>`
   width: 210px;
   border-radius: 4px;
   box-shadow: none;
-  cursor: pointer;
   transition: 0.3s;
 
   & .rcs__control,
@@ -22,6 +21,7 @@ const StyledSelect = styled(ReactSelect<IOption>)<ISelectProps>`
     border-radius: 4px;
     border: none;
     outline: none;
+	cursor: pointer;
   }
 
   & .rcs__menu {
@@ -31,6 +31,7 @@ const StyledSelect = styled(ReactSelect<IOption>)<ISelectProps>`
     & div {
       color: ${(props): string => props.theme.colors.black};
       background: ${(props): string => props.theme.colors.secondary30};
+	  cursor: pointer;
       & *:hover {
         background: ${(props): string => props.theme.colors.secondary40};
       }

@@ -1,12 +1,22 @@
 import Head from 'next/head';
+import styled from 'styled-components';
 
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 import { ILayoutProps } from './Layout.types';
 
-import style from './Layout.module.css';
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Main = styled.main`
+  flex-grow: 1;
+  padding-top: 100px;
+`;
 
 function Layout({ children, keywords, title }: ILayoutProps): JSX.Element {
   return (
@@ -15,11 +25,11 @@ function Layout({ children, keywords, title }: ILayoutProps): JSX.Element {
         <meta name="keywords" content={keywords}></meta>
         <title>{title}</title>
       </Head>
-      <div className={style.wrapper}>
+      <Wrapper>
         <Header />
-        <main className={style.main}>{children}</main>
+        <Main>{children}</Main>
         <Footer />
-      </div>
+      </Wrapper>
     </>
   );
 }

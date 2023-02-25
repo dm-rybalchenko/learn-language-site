@@ -5,6 +5,7 @@ import Layout from '@/components/Layout/Layout';
 
 function Book(): JSX.Element {
   const { query } = useRouter();
+
   return (
     <Layout title="Книга">
       <div>

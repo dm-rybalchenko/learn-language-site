@@ -1,4 +1,5 @@
 import Button from '@/components/Button/Button';
+import Filters from '@/components/Filters/Filters';
 import Layout from '@/components/Layout/Layout';
 import Select from '@/components/Select/Select';
 
@@ -40,6 +41,7 @@ export default function Home(): JSX.Element {
             onChange={(v): void => console.log(v)}
           />
         </div>
+		<Filters />
       </Layout>
     </>
   );
