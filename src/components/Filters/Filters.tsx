@@ -3,12 +3,12 @@ import { useRouter } from 'next/router';
 import { SingleValue } from 'react-select';
 import styled, { css } from 'styled-components';
 
-import Select from '../Select/Select';
+import Select from '../UI/Select/Select';
 import IconAudioBook from '../icons/IconAudioBook';
 import IconBook from '../icons/IconBook';
 import IconFilm from '../icons/IconFilm';
 
-import { IOption } from '../Select/Select.types';
+import { IOption } from '../UI/Select/Select.types';
 import { TConditionReturn } from '@/interfaces/styled.types';
 import { ILinkProps } from './Fitrers.types';
 
@@ -17,8 +17,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 27px;
-  margin: 0 30px;
+  margin: 0 auto;
   padding: 46px 48px 62px;
+  max-width: 860px;
   background: ${(props): string => props.theme.colors.primary30};
   border-radius: 16px;
 `;
@@ -53,7 +54,7 @@ const StyledLink = styled(Link)<ILinkProps>`
   }
 
   ${(props): TConditionReturn =>
-    Boolean(props.active) &&
+    props.$active &&
     css`
       &, &:hover, &:active {
         color: ${(props): string => props.theme.colors.white} !important;
@@ -96,19 +97,19 @@ function Filters(): JSX.Element {
     <Wrapper>
       <Links>
         <StyledLink
-          active={pathname.includes('/films')}
+          $active={pathname.includes('/films')}
           href={`/${query.lang}/films`}
         >
           <IconFilm /> Фильмы
         </StyledLink>
         <StyledLink
-          active={pathname.includes('/books')}
+          $active={pathname.includes('/books')}
           href={`/${query.lang}/books`}
         >
           <IconBook /> Книги
         </StyledLink>
         <StyledLink
-          active={pathname.includes('/audio-books')}
+          $active={pathname.includes('/audio-books')}
           href={`/${query.lang}/audio-books`}
         >
           <IconAudioBook /> Аудио-книги

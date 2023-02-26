@@ -1,15 +1,14 @@
 import Filters from '@/components/Filters/Filters';
 import Layout from '@/components/Layout/Layout';
+import List from '@/components/List/List';
+import mock from '../../../mock/mock.json';
 
 
 function Films(): JSX.Element {
-
   return (
     <Layout title="Фильмы">
-      <div>
-        <h1>Страница Фильмов</h1>
-		<Filters />
-      </div>
+      <Filters />
+      <List items={mock.films} />
     </Layout>
   );
 }

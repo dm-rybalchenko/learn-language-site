@@ -45,7 +45,7 @@ const StyledSelect = styled(ReactSelect<IOption>)<ISelectProps>`
   }
 
   ${(props): TConditionReturn =>
-    Boolean(props.short) &&
+    props.short &&
     css`
       width: 136px;
     `}

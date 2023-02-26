@@ -10,6 +10,7 @@ export interface IButtonProps
     'ref'
   > {
   children: ReactNode;
-  view?: 'error' | 'warning';
+  view: 'primary' | 'error' | 'warning';
   rounded?: boolean;
+  border?: boolean;
 }

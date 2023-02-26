@@ -1,25 +1,17 @@
-import styled from "styled-components";
+import ItemList from '../ItemList/ItemList';
+import Flex from '../UI/Flex/Flex';
 
-const Wrapper = styled.div`
-	display: flex;
-`;
+import { IListProps } from './List.types';
 
-const Item = styled.div`
-	
-`
 
-interface IListProps {
-	items: any[]
+function List({ items }: IListProps): JSX.Element {
+  return (
+    <Flex gap={50} padding='50px 0 50px 0'>
+      {items.map((item) => (
+        <ItemList key={item.id} item={item} />
+      ))}
+    </Flex>
+  );
 }
-
-function List ({items}:IListProps) {
-	
-	return (
-		<Wrapper>
-			{/* {items.map(item => <Item />) } */}
-		</Wrapper>
-	);
-}
-
 
 export default List;

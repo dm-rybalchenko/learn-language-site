@@ -1,3 +1,3 @@
 export interface ILinkProps {
-  active?: boolean;
+  $active: boolean;
 }

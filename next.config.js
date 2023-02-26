@@ -14,6 +14,11 @@ const nextConfig = {
         destination: '/spa/films',
         permanent: true,
       },
+      {
+        source: '/',
+        destination: '/eng/films',
+        permanent: true,
+      },
     ];
   },
 };

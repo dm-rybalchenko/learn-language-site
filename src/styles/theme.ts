@@ -11,6 +11,7 @@ export const theme: ITheme = {
     secondary20: '#EDEDED',
     secondary30: '#EAEAEA',
     secondary40: '#C3C3C3',
+    secondary50: '#626262',
     error10: '#F96784',
     error20: '#F74165',
     error30: '#F61B46',

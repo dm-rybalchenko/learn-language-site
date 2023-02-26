@@ -15,7 +15,9 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   flex-grow: 1;
-  padding-top: 100px;
+  margin: 0 auto;
+  padding: 120px 30px 0px;
+  max-width: 1300px;
 `;
 
 function Layout({ children, keywords, title }: ILayoutProps): JSX.Element {

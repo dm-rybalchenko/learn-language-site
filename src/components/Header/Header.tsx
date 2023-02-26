@@ -12,9 +12,9 @@ const StyledHeader = styled.header`
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  padding: 0 96px;
+  padding: 0 50px;
   align-items: center;
-  min-width: 100vw;
+  min-width: 100%;
   height: 70px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(50px);
@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
 function Header(): JSX.Element {
   return (
     <StyledHeader>
-      <Link href="/">
+      <Link href="/eng/films">
         <IconLogo />
       </Link>
       <Menu />
